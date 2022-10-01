@@ -68,7 +68,10 @@ const Description = (props) => {
       <Modal.Body style={{ backgroundColor: '#DEEDED' }}>
         <div className="pokemon-modal-container">
           <div className="pokemon-modal-container__title-mobile">
-            <div>{props.data.modalData.name.toUpperCase()}</div>
+            <div style={{ textAlignLast: 'justify' }}>
+              {props.data.modalData.name.toUpperCase()}{' '}
+              <span onClick={() => props.setDisplayModal(false)}>x</span>
+            </div>
             <div style={{ fontWeight: '400' }}>
               {('00' + props.data.modalData.id).slice(-3)}
             </div>
@@ -84,6 +87,7 @@ const Description = (props) => {
                 {('00' + props.data.modalData.id).slice(-3)}
               </span>
               <span className="vertical-line"></span>
+              <span onClick={() => props.setDisplayModal(false)}>x</span>
             </div>
             {species?.description}
           </div>
