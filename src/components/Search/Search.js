@@ -27,7 +27,6 @@ const Option = (props) => {
 const Search = () => {
   const [searchInput, setSearchInput] = useState('');
   const [pokemonList, setPokemonList] = useState([]);
-  const [pokemonSearched, setPokemonSearched] = useState({});
   const [typeDropDown, setTypeDropDown] = useState([]);
   const [typeSelected, setTypeSelected] = useState([]);
   const [allTypes, setAllTypes] = useState([]);
