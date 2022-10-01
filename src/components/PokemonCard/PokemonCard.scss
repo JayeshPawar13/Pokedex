@@ -1,0 +1,44 @@
+@use '../../variables';
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 194px;
+  height: 277px;
+  border: 1px dashed #2e3156;
+  border-radius: 8px;
+}
+
+.card-img {
+  flex-basis: 60%;
+  padding: 1em;
+  height: 200px;
+  width: 170px;
+  margin: auto;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: variables.$title-color;
+  text-align: center;
+}
+.card-subtitle {
+  margin-bottom: 1em;
+  font-weight: 400;
+  font-size: 20px;
+  color: variables.$title-color;
+  text-align: center;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .card-body {
+    width: 160px;
+    height: 221px;
+  }
+  .card-img {
+    width: 125px;
+    height: 122px;
+  }
+}

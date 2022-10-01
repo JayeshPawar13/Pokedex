@@ -1,0 +1,63 @@
+@use '../../variables';
+
+.header-container-desktop {
+  display: flex;
+  text-align: left;
+  flex-flow: row wrap;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.header-container-mobile {
+  // display: flex;
+  text-align: left;
+  // flex-flow: row wrap;
+  // font-weight: bold;
+  // margin-right: auto;
+}
+
+.header-title {
+  align-self: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: variables.$title-color;
+}
+
+.header-subtitle {
+  font-size: 20px;
+  margin: 1em;
+  align-self: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+
+  color: #5d5f7e;
+}
+
+.vertical-line {
+  border-left: 1px solid #5d5f7e;
+  height: 60px;
+  margin: 1em;
+}
+
+@media only screen and (min-device-width: 769px) {
+  .header-container-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .header-container-desktop {
+    display: none;
+  }
+
+  .header-container-mobile {
+    margin-bottom: 2em;
+  }
+  .header-subtitle {
+    margin: 0;
+  }
+}
